@@ -7,24 +7,24 @@
   margin: 0 auto;
   width: 100%;
   /*max-width: 800px;*/
-  background-color: skyblue;
+  background-color: #729E87;
 }
 
 .top {
   margin: 0 auto;
   max-width: 70%;
   color: white;
-  height: 115px;
+  height: 100px;
 
 }
 
 .head-h1{
   float: left;
-  line-height: 100px;
   /*padding-bottom: 15px;*/
   text-transform: uppercase;
   font-style: italic;
   font-size: 2.5em;
+  line-height: 80px;
 }
 
 nav {
@@ -81,7 +81,7 @@ nav li input:active {
 .sm-container{
   margin: 0 auto;
   width: 500px;
-  border: 1px dotted skyblue;
+  border: 1px dotted #729E87;
   margin-top: 100px;
   padding: 20px;
 }
@@ -93,7 +93,7 @@ nav li input:active {
 .sm-container h1{
   text-align: center;
   font-style: italic;
-  color: skyblue;
+  color: #729E87;
   text-transform: uppercase;
 }
 
@@ -131,13 +131,13 @@ nav li input:active {
 }
 
 .sm-container a {
-  color: #2f67ce;
+  color: #489684;
   text-decoration: none;
   text-transform: capitalize;
 }
 
 .sm-container a:visited {
-  color: #2f67ce;
+  color: #489684;
 }
 
 .sm-container a:hover {
