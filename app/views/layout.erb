@@ -15,9 +15,32 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Artist Generation</title>
 </head>
 <body>
-  <%= yield %>
+  <header class="head-contain">
+    <div class="top">
+      <h1 class="head-h1">Artist Generation</h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="/">home</a></li> |
+          <% if logged_in? %>
+            <form action="/sessions" method="POST" class="logout-form">
+              <input type="hidden" name="_method" value="DELETE">
+              <li><input type="submit" value="LOGOUT"></li> |
+            </form>
+            <li><a href="/users/<%= current_user %>"> <%= current_user.email %></a></li> |
+            <li><a href="/users">Users</a></li>
+          <% else %>
+            <li><a href="/sessions/new">login</a></li> |
+            <li><a href="/users/new">register</a></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="main-container">
+    <%= yield %>
+  </div>
 </body>
 </html>

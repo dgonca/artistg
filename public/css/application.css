@@ -1,0 +1,149 @@
+/*.main-container {
+  margin: 0 auto;
+  width: 100%
+}*/
+
+.head-contain {
+  margin: 0 auto;
+  width: 100%;
+  /*max-width: 800px;*/
+  background-color: skyblue;
+}
+
+.top {
+  margin: 0 auto;
+  max-width: 70%;
+  color: white;
+  height: 115px;
+
+}
+
+.head-h1{
+  float: left;
+  line-height: 100px;
+  /*padding-bottom: 15px;*/
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 2.5em;
+}
+
+nav {
+  float: right;
+  padding: 5px;
+
+}
+
+nav ul{
+  list-style-type: none;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+
+nav li{
+  display: inline-block;
+}
+
+nav li a{
+  color: white;
+  text-decoration: none;
+}
+nav li input{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+nav li input:hover{
+  font-style: italic;
+  border: none;
+}
+nav form{
+  display: inline-block;
+}
+
+
+nav li a:visited{
+  color: white;
+}
+
+nav li a:hover{
+  font-style: italic;
+}
+
+nav li input:active {
+  border: none;
+
+}
+
+.sm-container{
+  margin: 0 auto;
+  width: 500px;
+  border: 1px dotted skyblue;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.tight {
+  margin-top: 50px;
+}
+
+.sm-container h1{
+  text-align: center;
+  font-style: italic;
+  color: skyblue;
+  text-transform: uppercase;
+}
+
+.sm-container form{
+  text-align: center;
+}
+
+.sm-container form label{
+  display: block;
+  padding: 5px;
+}
+
+.sm-container form submit:hover{
+  font-style: italic;
+}
+
+.sm-container form input,
+.sm-container form select {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 7px;
+}
+
+.sm-container form select{
+  display: inline-block;
+}
+
+.sm-container form .select-label{
+  display: inline-block;
+}
+
+
+.sm-container h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+.sm-container a {
+  color: #2f67ce;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.sm-container a:visited {
+  color: #2f67ce;
+}
+
+.sm-container a:hover {
+  font-style: italic;
+}
+
+
+
+
