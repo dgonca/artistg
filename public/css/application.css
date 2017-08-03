@@ -144,6 +144,14 @@ nav li input:active {
   font-style: italic;
 }
 
+.fb-button {
+  margin-left: 25%;
+}
+
+.hide {
+  display: none;
+}
+
 
 
 

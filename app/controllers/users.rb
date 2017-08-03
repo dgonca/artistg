@@ -12,7 +12,7 @@ get '/users/:id' do
   logger.info current_id.class
   if current_user.id == current_id
     @user = User.find_by(id: session[:user_id])
-    erb :'users/show'
+    erb :"users/show"
   else
     redirect '/404'
   end
@@ -24,7 +24,7 @@ post '/users' do
 
   if @user.save
     session[:user_id] = @user.id
-    redirect "/users/#{@user.id}"
+    redirect "/generations/new"
   else
     @errors = @user.errors.full_messages
     erb :'users/new'
