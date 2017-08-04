@@ -18,9 +18,16 @@ function grabUserInfo(response) {
 
         var $welcome = $(".welcome");
 
+
+        if (response.education[1].type === "College") {
+          var $college = response.education[1].school.name
+        }
+        console.log(response.education[1].type)
+
         var usersInfo = {
           name: response.name,
-          location: response.location.name
+          location: response.location.name,
+          college: $college
         }
 
         $.ajax({
@@ -30,10 +37,12 @@ function grabUserInfo(response) {
         })
         .done(function(response){
           $(".welcome-name").text("Welcome " + response.name);
-          $("welcome-location").text("You are located in " + response.location);
+          $(".welcome-location").text("You are located in " + response.location);
+          $(".welcome-education").text("You went to: " + response.college);
 
           $welcome.append($(".wecome-name"));
           $welcome.append($(".welcome-location"));
+          $welcome.append($(".welcome-education"));
           $welcome.removeClass("hide");
         })
 

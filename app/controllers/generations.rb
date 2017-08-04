@@ -10,10 +10,11 @@ post '/generations/begin' do
   @user = current_user
   @user.users_name = params[:name]
   @user.location = params[:location]
+  @user.college = params[:college]
 
   if request.xhr?
     content_type :json
-    {name: @user.users_name, location: @user.location}.to_json
+    {name: @user.users_name, location: @user.location, college: @user.college}.to_json
   end
 
 end
