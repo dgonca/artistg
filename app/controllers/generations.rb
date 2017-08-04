@@ -3,5 +3,5 @@ get '/generations' do
 end
 
 get '/generations/new' do
-  erb :'generations/new'
+  erb :'generations/new', layout: false
 end

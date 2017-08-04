@@ -1,7 +1,25 @@
-$(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+function checkingState(action) {
+  FB.getLoginStatus(response)
+    if (response.status === 'connected'){
+      action
+    } else {
+      alert("Error on Login");
+    }
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+}
+
+    console.log("ive been hit");
+
+
+$(document).ready(function() {
+
+  $("body").on("click", ".start-build", function(e){
+    e.preventDefault();
+    console.log()
+
+    function grabUserInfo(response) {
+      FB.api
+    }
+  });
+
 });
