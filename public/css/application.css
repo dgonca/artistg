@@ -152,6 +152,19 @@ nav li input:active {
   display: none;
 }
 
+.lg-container{
+  margin: 0 auto;
+  width: 800px;
+  border: 1px dotted #729E87;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.lg-container img{
+  width: 200px;
+  display: inline-block;
+  height: auto;
+}
 
 
 

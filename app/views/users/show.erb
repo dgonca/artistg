@@ -1,1 +1,12 @@
-show.erb
+<div class="sm-container">
+  <h3>Name: <%= @user.users_name  %></h3>
+  <h3>City: <%= @user.location  %></h3>
+  <h3>College: <%= @user.college  %></h3>
+  <h3>Email: </h3>
+</div>
+
+<div class="lg-container">
+  <% @user.photos.each do |photo| %>
+    <img src="<%= photo.url %>" class="portfolio-imgs">
+  <% end %>
+</div>
