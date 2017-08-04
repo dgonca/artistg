@@ -27,7 +27,8 @@ function grabUserInfo(response) {
         var usersInfo = {
           name: response.name,
           location: response.location.name,
-          college: $college
+          college: $college,
+          email: response.email
         }
 
         $.ajax({
@@ -44,6 +45,7 @@ function grabUserInfo(response) {
           $welcome.append($(".welcome-location"));
           $welcome.append($(".welcome-education"));
           $welcome.removeClass("hide");
+          $(".user-photos-button").removeClass("hide");
         })
 
 
@@ -54,7 +56,33 @@ function grabUserInfo(response) {
   }
 }
 
-    console.log("ive been hit");
+function grabImages(response) {
+  if (response.authResponse){
+    FB.api('/me/photos/uploaded', function(response){
+      // console.log(response);
+
+      for(var i=0; i < 15; i++){
+          var imgId = response.data[i].id;
+          FB.api("/" + imgId + "?fields=images", function(imgResponse){
+            imgSrc = imgResponse.images[0].source;
+            $.ajax({
+              method: "POST",
+              url: "/generations/photos",
+              data: { url: imgSrc}
+            })
+            .done(function(response){
+              console.log(response.url);
+            });
+          });
+        }
+
+    })
+
+    $(".go-to-profile").removeClass("hide")
+  } else {
+    alert("error on login!");
+  }
+}
 
 
 $(document).ready(function() {
@@ -66,5 +94,12 @@ $(document).ready(function() {
     checkingState("grabUserInfo");
 
   });
+
+  $("body").on("click", ".user-photos-button", function(e){
+    e.preventDefault();
+    console.log("lets look at some photos");
+
+    checkingState("grabImages");
+  })
 
 });

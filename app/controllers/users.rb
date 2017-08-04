@@ -11,7 +11,7 @@ get '/users/:id' do
   current_id = params[:id].to_i
   logger.info current_id.class
   if current_user.id == current_id
-    @user = User.find_by(id: session[:user_id])
+    @user = User.find_by(id: current_user.id)
     erb :"users/show"
   else
     redirect '/404'
