@@ -23,19 +23,19 @@ function grabUserInfo(response) {
           location: response.location.name
         }
 
-        // $.ajax({
-        //   method: "POST",
-        //   url: $(".start-build").attr("href"),
-        //   data: usersInfo
-        // })
-        // .done(function(response){
-        //   $(".welcome-name").text("Welcome " + response.name);
-        //   $("welcome-location").text("You are located in " + response.location);
+        $.ajax({
+          method: "POST",
+          url: $(".start-build").attr("href"),
+          data: usersInfo
+        })
+        .done(function(response){
+          $(".welcome-name").text("Welcome " + response.name);
+          $("welcome-location").text("You are located in " + response.location);
 
-        //   $welcome.append($(".wecome-name"));
-        //   $welcome.append($(".welcome-location"));
-        //   $welcome.removeClass("hide");
-        // })
+          $welcome.append($(".wecome-name"));
+          $welcome.append($(".welcome-location"));
+          $welcome.removeClass("hide");
+        })
 
 
       }
