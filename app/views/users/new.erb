@@ -1,1 +1,20 @@
-new.erb
+<div class="sm-container">
+  <h1>Sign Up at Artist Generation</h1>
+  <% if @errors %>
+    <% @errors.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+  <% end %>
+
+<div>
+  <form action='/users' method="post">
+    <label for="email">Email:</label>
+    <input type="text" name="user[email]" id="email">
+    <label for="username">Username:</label>
+    <input type="text" name="user[username]" id="username">
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password">
+    <input type="submit" value="Create Account">
+  </form>
+</div>
+</div>
